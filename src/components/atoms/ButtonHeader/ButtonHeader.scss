@@ -1,0 +1,30 @@
+.ButtonHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .btn_code {
+        width: 100px;
+        height: 30px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        user-select: none;
+        background: #fff;
+        font-weight: 500;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        color: var(--black);
+        transition: all 0.5s;
+        
+
+        &.active-button{
+            background: var(--c400);
+            color: var(--white);
+        }
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}

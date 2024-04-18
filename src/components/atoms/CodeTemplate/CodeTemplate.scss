@@ -1,0 +1,16 @@
+.CodeTemplate {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    .code-left {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .code-right {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+}

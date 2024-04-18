@@ -1,0 +1,83 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue: #162b4e;
+    --c50: #f4f6fb;
+    --c100: #e9edf5;
+    --c200: #ced8e9;
+    --c300: #a2b7d7;
+    --c400: #7090c0;
+    --c500: #4e73a9;
+    --c600: #3c5b8d;
+    --c700: #314973;
+    --c800: #2c3f60;
+    --c900: #293751;
+    --c950: #131926;
+    --c1000: #1d2536;
+    --c1050: #ffa500;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 35px;
+    /* color: #DAA520; */
+    color: #162b4e;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #7f7f7f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+    *::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+body.noScrollBar::-webkit-scrollbar {
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #7f7f7f;
+    border-radius: 10px;
+    border: 0 solid #ffffff;
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: local("Metropolis"),
+        url(./assets/fonts/metropolis/Metropolis-Regular.otf);
+}
+
+body {
+    background: var(--c950);
+    font-family: "Metropolis", sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
