@@ -1,0 +1,16 @@
+.ButtonView{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    .code-right{
+        .button-example{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

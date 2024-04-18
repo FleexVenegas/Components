@@ -47,6 +47,11 @@
                 height: 35px;
                 transition: all 0.5s;
 
+                &.found {
+                    border-radius: 5px;
+                    animation: Select 1s infinite alternate;
+                }
+
                 &.active {
                     border-radius: 5px;
                     padding: 0 10px;
@@ -72,4 +77,16 @@
         }
 
     }
+}
+
+
+@keyframes Select {
+    0% {
+        background: var(--c950);
+    }
+
+    100% {
+        background: var(--c700);
+    }
+
 }

@@ -1,0 +1,13 @@
+.TextAreaView {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .code-right {
+        .cnt-textarea {
+            width: 100%;
+        }
+
+    }
+}

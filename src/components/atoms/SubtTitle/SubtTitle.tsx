@@ -1,19 +1,18 @@
 import React from "react";
-import "./Title.scss";
+import "./SubTitle.scss";
 import { TitleProps } from "../../../interfaces/Title.interfaces";
 
-
-const Title: React.FC<TitleProps> = ({
+const SubtTitle: React.FC<TitleProps> = ({
     className = "",
     title,
     description,
 }) => {
     return (
-        <div className={`Title ${className}`}>
-            <h1 className="title-title">{title}</h1>
+        <div className={`SubTitle ${className}`}>
+            <h2 className="title-title">{title}</h2>
             {description && <p className="parr-title">{description}</p>}
         </div>
     );
 };
 
-export default Title;
+export default SubtTitle;

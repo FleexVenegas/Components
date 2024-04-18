@@ -1,13 +1,19 @@
-//Components
 import { useState } from "react";
+
+//Components
 import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
 import CodeTemplate from "../../components/atoms/CodeTemplate/CodeTemplate";
 import Container from "../../components/atoms/Container/Container";
 import Input from "../../components/atoms/Input/Input";
 import Title from "../../components/atoms/Title/Title";
+import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
 
 //Styles
 import "./InputView.scss";
+
+//Lenguajes
+import { JavaScript, SCSS, TypeScript, Use } from "./Lenguajes";
+import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
 
 const InputView = () => {
     const [selectLenguaje, setSelectLenguaje] = useState("JavaScript");
@@ -20,125 +26,16 @@ const InputView = () => {
                     <div className="code-left">
                         <ButtonHeader setSelect={setSelectLenguaje} />
                         <div className="cnt-code">
-                            <pre>
-                                {selectLenguaje === "JavaScript" && (
-                                    <code className="code_">
-                                        {`
-    import React, { ChangeEventHandler } from "react";
-
-    const Input = ({
-        className, 
-        text, 
-        type, 
-        name, 
-        value, 
-        placeholder, 
-        onChange
-    }) => {
-        return (
-            <div className={"Input"}>
-                {text && 
-                    <span className="title-input">
-                        {text}
-                    </span>
-                }
-                <input
-                    className={"cs-input"}
-                    type={type}
-                    name={name}
-                    value={value}
-                    placeholder={placeholder}
-                    onChange={onChange}
-                />
-            </div>
-        )
-    }
-
-    export default Input;
-    
-                                        `}
-                                    </code>
-                                )}
-                                {selectLenguaje === "TypeScript" && (
-                                    <code className="code_">
-                                        {`
-    import React, { ChangeEventHandler } from "react";
-
-    interface InputProps {
-        className?: string;
-        text?: string;
-        name?: string;
-        value?: string;
-        type: "text" | "email" | "number";
-        placeholder?: string;
-        onChange?: ChangeEventHandler<HTMLInputElement>;
-    }
-    
-    const Input: React.FC<InputProps> = ({
-        className = "",
-        text,
-        name,
-        value,
-        type = "text",
-        placeholder,
-        onChange,
-    }) => {
-        return (
-            <div className={"Input"}>
-                {text && 
-                    <span className="title-input">
-                        {text}
-                    </span>
-                }
-                <input
-                    className={"cs-input"}
-                    type={type}
-                    name={name}
-                    value={value}
-                    placeholder={placeholder}
-                    onChange={onChange}
-                />
-            </div>
-        );
-    };
-    export default Input;
-                                    `}
-                                    </code>
-                                )}
-                                {selectLenguaje === "SCSS" && (
-                                    <code className="code_">
-                                        {`
-    .Input {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    
-        .title-input {
-            font-size: 0.9rem;
-            margin-left: 10px;
-            color: #fff;
-        }
-    
-    
-        .cs-input {
-            width: 100%;
-            height: 40px;
-            outline: none;
-            border: none;
-            border-radius: 8px;
-            padding: 0 10px;
-            font-size: 1rem;
-        }
-    }
-                                        `}
-                                    </code>
-                                )}
-                            </pre>
+                            <Syntaxis>
+                                {selectLenguaje === "JavaScript" && JavaScript}
+                                {selectLenguaje === "TypeScript" && TypeScript}
+                                {selectLenguaje === "SCSS" && SCSS}
+                                {selectLenguaje === "USE" && Use}
+                            </Syntaxis>
                         </div>
                     </div>
                     <div className="code-right">
-                        <h2>Example</h2>
+                        <SubtTitle title="Example" />
                         <div className="right_example">
                             <Input
                                 text="Fullname"

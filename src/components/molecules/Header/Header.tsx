@@ -12,10 +12,20 @@ import { NavLink } from "react-router-dom";
 
 const Header: React.FC<ClassProps> = ({ className = "" }) => {
     const optionLink = [
-        { id: 1, text: "Home", url: "#" },
-        { id: 2, text: "Option1", url: "#" },
-        { id: 2, text: "Option1", url: "#" },
-        { id: 2, text: "GitHub", url: "#" },
+        {
+            id: 1,
+            text: "Home",
+            url: "https://diegovenegas.businesscodebuilders.com/",
+            target: "",
+        },
+        // { id: 2, text: "Option1", url: "#" },
+        // { id: 2, text: "Option1", url: "#" },
+        {
+            id: 2,
+            text: "GitHub",
+            url: "https://github.com/FleexVenegas/Components",
+            target: "_blank",
+        },
     ];
 
     return (
@@ -27,7 +37,12 @@ const Header: React.FC<ClassProps> = ({ className = "" }) => {
             <div className="cnt_options">
                 <nav className="cnt_nav">
                     {optionLink.map((_, idx) => (
-                        <NavLink to={_.url} key={idx} className={"link"}>
+                        <NavLink
+                            to={_.url}
+                            key={idx}
+                            className={"link"}
+                            target={_.target}
+                        >
                             {_.text}
                         </NavLink>
                     ))}

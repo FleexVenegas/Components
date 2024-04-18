@@ -1,0 +1,14 @@
+.SubTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    .title-title{
+        font-size: 1.5rem;
+        color: var(--blue);
+    }
+
+    .parr-title{
+        font-size: 1rem;
+    }
+}

@@ -5,30 +5,38 @@ import { ClassProps } from "../../../interfaces/ClassProps.interfaces";
 
 //Style
 import "./Aside.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Input from "../../atoms/Input/Input";
 
 const Aside: React.FC<ClassProps> = ({ className = "" }) => {
     const [search, setSearch] = useState("");
-    const optionComponents = [
+    const [idComponent, setIdComponent] = useState<number | null>(null);
+    const location = useLocation();
+
+    const [optionComponents, setOptionComponents] = useState([
         {
             id: 1,
             text: "Input",
-            url: "/input",
+            url: "/component/input",
         },
         {
             id: 2,
             text: "Text area",
-            url: "#",
+            url: "/component/text-area",
         },
         {
             id: 3,
             text: "Button",
-            url: "#",
+            url: "/component/button",
         },
-    ];
+    ]);
 
-    const [idComponent, setIdComponent] = useState<number | null>(1);
+    useEffect(() => {
+        const optionSort = [...optionComponents].sort((a, b) =>
+            a.text.localeCompare(b.text)
+        );
+        setOptionComponents(optionSort);
+    }, []);
 
     useEffect(() => {
         setIdComponent(null);
@@ -39,11 +47,16 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             if (foundComponent) {
                 const idElement = foundComponent.id;
                 setIdComponent(idElement);
+                setTimeout(() => {
+                    setIdComponent(null);
+                }, 7000);
             }
         };
 
         handleSearch();
     }, [search]);
+
+    console.log(idComponent);
 
     return (
         <aside className={`Aside ${className}`}>
@@ -61,7 +74,9 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
                     {optionComponents.map((_, idx) => (
                         <li
                             key={idx}
-                            className={`a-li ${_.id === idComponent ? "active" : ""}`}
+                            className={`a-li ${
+                                location.pathname === _.url ? "active" : ""
+                            } ${idComponent === _.id ? "found" : ""}`}
                         >
                             <NavLink className={"text_compon"} to={_.url}>
                                 {_.text}

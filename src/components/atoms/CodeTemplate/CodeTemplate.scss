@@ -12,5 +12,9 @@
 
     .code-right {
         grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
     }
 }
