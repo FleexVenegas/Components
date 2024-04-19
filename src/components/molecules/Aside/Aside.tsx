@@ -34,6 +34,11 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             text: "Select",
             url: "/component/select",
         },
+        {
+            id: 5,
+            text: "Input Password",
+            url: "/component/input-password",
+        },
     ]);
 
     useEffect(() => {

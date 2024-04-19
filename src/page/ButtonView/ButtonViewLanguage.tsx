@@ -60,9 +60,9 @@ export const SCSS = `
 export const JavaScript = `
 import React from 'react'
 
-const Button = ({className, text}) => {
+const Button = ({className, text, onClick}) => {
     return (
-      <button className={"Button ${"className"}"}>
+      <button className={"Button ${"className"}"} onClick={onClick}>
           {text}
       </button>
     )
@@ -77,11 +77,16 @@ import React from 'react'
 interface ButtonProps{
     className?: string
     text: string
+    onClick?: () => void
 }
 
-const Button: React.FC<ButtonProps> = ({className = "", text}) => {
+const Button: React.FC<ButtonProps> = ({
+    className = "", 
+    text, 
+    onClick
+}) => {
   return (
-    <button className={"Button ${"className"}"}>
+    <button className={"Button ${"className"}"} onClick={onClick}>
         {text}
     </button>
   )
