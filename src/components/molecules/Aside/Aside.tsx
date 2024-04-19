@@ -29,6 +29,11 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             text: "Button",
             url: "/component/button",
         },
+        {
+            id: 4,
+            text: "Select",
+            url: "/component/select",
+        },
     ]);
 
     useEffect(() => {

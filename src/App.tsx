@@ -4,6 +4,7 @@ import InputView from "./page/InputView/InputView";
 import ViewMain from "./page/ViewMain/ViewMain";
 import TextAreaView from "./page/TextAreaView/TextAreaView";
 import ButtonView from "./page/ButtonView/ButtonView";
+import SelectView from "./page/SelectView/SelectView";
 
 function App() {
     return (
@@ -23,6 +24,10 @@ function App() {
                         <Route
                             path="/component/button"
                             element={<ButtonView />}
+                        />
+                        <Route
+                            path="/component/select"
+                            element={<SelectView />}
                         />
                     </Routes>
                 </Layout>

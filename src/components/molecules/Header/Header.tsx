@@ -15,13 +15,18 @@ const Header: React.FC<ClassProps> = ({ className = "" }) => {
         {
             id: 1,
             text: "Home",
-            url: "https://diegovenegas.businesscodebuilders.com/",
+            url: "/",
             target: "",
         },
-        // { id: 2, text: "Option1", url: "#" },
-        // { id: 2, text: "Option1", url: "#" },
         {
             id: 2,
+            text: "Diego Venegas",
+            url: "https://diegovenegas.businesscodebuilders.com/",
+            target: ""
+        },
+        // { id: 2, text: "Option1", url: "#" },
+        {
+            id: 3,
             text: "GitHub",
             url: "https://github.com/FleexVenegas/Components",
             target: "_blank",
