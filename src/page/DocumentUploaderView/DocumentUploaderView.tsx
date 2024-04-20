@@ -18,7 +18,7 @@ const DocumentUploaderView = () => {
     const [select, setSelect] = useState("JavaScript");
 
     return (
-        <Container className="DocumentUploaderView">
+        <Container className={`DocumentUploaderView ${file?.name ? "" : ""}`}>
             <Title title="Upload document" />
             <CodeTemplate>
                 <div className="code-left">

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
 import CodeTemplate from "../../components/atoms/CodeTemplate/CodeTemplate";
 import Container from "../../components/atoms/Container/Container";
