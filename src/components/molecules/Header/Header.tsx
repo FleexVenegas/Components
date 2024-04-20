@@ -53,6 +53,7 @@ const Header: React.FC<ClassProps> = ({ className = "" }) => {
                 <img src={Logo} alt="" />
                 <label className="label_com">Components</label>
             </div>
+            
             {windowWidth > 768 ? (
                 <div className="cnt_options">
                     <nav className="cnt_nav">
