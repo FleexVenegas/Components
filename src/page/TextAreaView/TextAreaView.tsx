@@ -51,7 +51,7 @@ const TextAreaView = () => {
                     </Syntaxis>
                 </div>
                 <div className="code-right">
-                    <SubtTitle title="Example" />
+                    <SubtTitle title="Ejemplo" />
                     <div className="cnt-textarea">
                         <TextArea text="Message" placeholder="Message" />
                     </div>

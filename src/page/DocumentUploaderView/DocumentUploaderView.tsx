@@ -51,7 +51,7 @@ const DocumentUploaderView = () => {
                     </Syntaxis>
                 </div>
                 <div className="code-right">
-                    <SubtTitle title="Example" />
+                    <SubtTitle title="Ejemplo" />
                     <DocumentUploader
                         documentType={[".pdf", ".docx"]}
                         setFile={setFile}

@@ -56,7 +56,7 @@ const InputView = () => {
                         </div>
                     </div>
                     <div className="code-right">
-                        <SubtTitle title="Example" />
+                        <SubtTitle title="Ejemplo" />
                         <div className="right_example">
                             <Input
                                 text="Fullname"

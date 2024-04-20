@@ -36,7 +36,7 @@ const ImageUploader = () => {
             <img className="selected-image" src={selectedImage} alt="Imagen seleccionada" />
           </div>
           <button className="change-image-button" onClick={handleImageReset}>
-              <img src={Close} alt="" />
+              ❌
           </button>
         </div>
       ) : (

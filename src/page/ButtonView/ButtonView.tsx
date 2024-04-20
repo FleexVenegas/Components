@@ -48,7 +48,7 @@ const ButtonView = () => {
                     </Syntaxis>
                 </div>
                 <div className="code-right">
-                    <SubtTitle title="Example" />
+                    <SubtTitle title="Ejemplo" />
                     <div className="button-example">
                         <Button text="Normal" />
                         <Button text="Send" className="submit" />

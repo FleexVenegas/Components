@@ -53,7 +53,7 @@ const InputPasswordView = () => {
                     </Syntaxis>
                 </div>
                 <div className="code-right">
-                    <SubtTitle title="Example" />
+                    <SubtTitle title="Ejemplo" />
                     <InputPassword text="Password" placeholder="Password" />
                 </div>
             </CodeTemplate>

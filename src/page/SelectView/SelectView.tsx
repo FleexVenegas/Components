@@ -51,7 +51,7 @@ const SelectView = () => {
                     </Syntaxis>
                 </div>
                 <div className="code-right">
-                    <SubtTitle title="Example" />
+                    <SubtTitle title="Ejemplo" />
                     <div className="cnt_example">
                         <Select text="Select" />
                     </div>
