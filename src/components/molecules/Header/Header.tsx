@@ -14,7 +14,7 @@ const Header: React.FC<ClassProps> = ({ className = "" }) => {
     const optionLink = [
         {
             id: 1,
-            text: "Home",
+            text: "Inicio",
             url: "/",
             target: "",
         },
