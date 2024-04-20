@@ -11,7 +11,8 @@ import "./TextAreaView.scss";
 import TextArea from "../../components/atoms/TextArea/TextArea";
 import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
 import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
-import { JavaScript, SCSS, TypeScript, USE } from "./TextAreaLanguages";
+import { JavaScript, CSS, TypeScript, USE } from "./TextAreaLanguages";
+import Copy from "../../components/atoms/Copy/Copy";
 
 const TextAreaView = () => {
     const [select, setSelect] = useState("JavaScript");
@@ -23,10 +24,30 @@ const TextAreaView = () => {
                 <div className="code-left">
                     <ButtonHeader setSelect={setSelect} />
                     <Syntaxis>
-                        {select === "JavaScript" && JavaScript}
-                        {select === "TypeScript" && TypeScript}
-                        {select === "SCSS" && SCSS}
-                        {select === "USE" && USE}
+                        {select === "JavaScript" && (
+                            <>
+                                {JavaScript}
+                                <Copy dataCopy={JavaScript} />
+                            </>
+                        )}
+                        {select === "TypeScript" && (
+                            <>
+                                {TypeScript}
+                                <Copy dataCopy={TypeScript} />
+                            </>
+                        )}
+                        {select === "CSS" && (
+                            <>
+                                {CSS}
+                                <Copy dataCopy={CSS} />
+                            </>
+                        )}
+                        {select === "USE" && (
+                            <>
+                                {USE}
+                                <Copy dataCopy={USE} />
+                            </>
+                        )}
                     </Syntaxis>
                 </div>
                 <div className="code-right">

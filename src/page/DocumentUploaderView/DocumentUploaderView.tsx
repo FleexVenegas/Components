@@ -1,27 +1,25 @@
-import { useState } from "react";
-
 //Components
-import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
-import CodeTemplate from "../../components/atoms/CodeTemplate/CodeTemplate";
+import { useState } from "react";
 import Container from "../../components/atoms/Container/Container";
-import InputPassword from "../../components/atoms/InputPassword/InputPassword";
-import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
-import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
 import Title from "../../components/atoms/Title/Title";
+import DocumentUploader from "../../components/organisms/DocumentUploader/DocumentUploader";
 
 //Styles
-import "./InputPasswordView.scss";
-
-//Languahes
-import { JavaScript, CSS, TypeScript, USE } from "./InputPasswordViewLanguaje";
+import "./DocumentUploaderView.scss";
+import CodeTemplate from "../../components/atoms/CodeTemplate/CodeTemplate";
+import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
+import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
+import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
+import { CSS, JavaScript, TypeScript, USE } from "./DocumentUploaderLanguage";
 import Copy from "../../components/atoms/Copy/Copy";
 
-const InputPasswordView = () => {
+const DocumentUploaderView = () => {
+    const [file, setFile] = useState<File | undefined>();
     const [select, setSelect] = useState("JavaScript");
 
     return (
-        <Container className="InputPasswordView">
-            <Title title="Input Password" />
+        <Container className="DocumentUploaderView">
+            <Title title="Upload document" />
             <CodeTemplate>
                 <div className="code-left">
                     <ButtonHeader setSelect={setSelect} />
@@ -54,11 +52,14 @@ const InputPasswordView = () => {
                 </div>
                 <div className="code-right">
                     <SubtTitle title="Example" />
-                    <InputPassword text="Password" placeholder="Password" />
+                    <DocumentUploader
+                        documentType={[".pdf", ".docx"]}
+                        setFile={setFile}
+                    />
                 </div>
             </CodeTemplate>
         </Container>
     );
 };
 
-export default InputPasswordView;
+export default DocumentUploaderView;

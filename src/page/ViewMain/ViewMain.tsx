@@ -10,7 +10,7 @@ import Title from "../../components/atoms/Title/Title";
 const ViewMain = () => {
     return (
         <Container className="ViewMain">
-            <Title title="Welcome to DV Components" />
+            <Title title="Bienvenido a DV Components" />
             <Description>
                 En DV Components, se creo una colección de componentes en
                 ReactJS y React tsx listos para usar en tus proyectos. Lo mejor

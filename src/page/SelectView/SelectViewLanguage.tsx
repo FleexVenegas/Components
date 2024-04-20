@@ -1,4 +1,4 @@
-export const Javascript = `
+export const JavaScript = `
 import React from "react";
 
 const Select = ({ text, name, value, onChange }) => {
@@ -76,37 +76,37 @@ const Select = ({ text, name, value, onChange }: SelectProps) => {
 export default Select;
 `;
 
-export const SCSS = `
+export const CSS = `
 .Select {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
 
-    .text-select {
-        font-size: 1rem;
-        color: #000;
-        margin-left: 10px;
-    }
+.text-select {
+    font-size: 1rem;
+    color: #000;
+    margin-left: 10px;
+}
 
-    .select-select {
-        border: none;
-        outline: none;
-        background: #fff;
-        height: 40px;
-        width: 100%;
-        border-radius: 8px;
-        font-size: 1rem;
-        padding: 0 10px;
-        color: #1a2931;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+.select-select {
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0 10px;
+    color: #1a2931;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);    
+}
 
-        option {
-            font-size: 1rem;
-            color: #2d414c;
-            border-radius: 15px;
-        }
-    }
+.select-option {
+    font-size: 1rem;
+    color: #2d414c;
+    border-radius: 15px;
 }
 `;
 

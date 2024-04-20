@@ -11,7 +11,7 @@ const ButtonHeader: React.FC<ButtonHeaderProps> = ({ setSelect }) => {
     const buttons = [
         { id: 1, text: "JavaScript" },
         { id: 2, text: "TypeScript" },
-        { id: 3, text: "SCSS" },
+        { id: 3, text: "CSS" },
         { id: 5, text: "USE" },
     ];
 

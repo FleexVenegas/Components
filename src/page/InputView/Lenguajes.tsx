@@ -75,35 +75,35 @@ const Input: React.FC<InputProps> = ({
 export default Input;
 `;
 
-export const SCSS = `
+export const CSS = `
 .Input {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
 
-    .title-input {
-        font-size: 0.9rem;
-        margin-left: 10px;
-        color: #000;
-    }
+.title-input {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: #000;
+}
 
 
-    .cs-input {
-        width: 100%;
-        height: 40px;
-        outline: none;
-        border: none;
-        border-radius: 8px;
-        padding: 0 10px;
-        font-size: 1rem;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    }
+.cs-input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 `;
 
 
-export const Use = `
+export const USE = `
 <Input
     text="Fullname"
     type="text"

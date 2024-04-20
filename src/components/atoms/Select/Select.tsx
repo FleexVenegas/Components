@@ -31,7 +31,7 @@ const Select = ({ text, name, value, onChange }: SelectProps) => {
                 required
             >
                 {selectionOption.map((_, idx) => (
-                    <option key={idx} value={_.value}>
+                    <option className="select-option" key={idx} value={_.value}>
                         {_.text}
                     </option>
                 ))}

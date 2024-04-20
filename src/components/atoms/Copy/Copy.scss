@@ -1,0 +1,36 @@
+.Container-copy {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+
+    .copy {
+        border: none;
+        outline: none;
+        background: transparent;
+        border-radius: 50%;
+        cursor: pointer;
+
+        .btn-svg {
+            path {
+                transition: all 0.5s;
+
+                &:hover {
+                    fill: var(--c500);
+                }
+            }
+        }
+    }
+
+    .mess-copy {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 23px;
+        background-color: var(--c200);
+        padding: 5px;
+        border-radius: 5px;
+        color: var(--black);
+        font-size: .8rem;
+        font-weight: bold;
+    }
+}

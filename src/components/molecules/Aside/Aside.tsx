@@ -21,7 +21,7 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
         },
         {
             id: 2,
-            text: "Text area",
+            text: "Text Area",
             url: "/component/text-area",
         },
         {
@@ -38,6 +38,11 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             id: 5,
             text: "Input Password",
             url: "/component/input-password",
+        },
+        {
+            id: 6,
+            text: "Upload Document",
+            url: "/component/upload-document",
         },
     ]);
 
@@ -66,16 +71,15 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
         handleSearch();
     }, [search]);
 
-    console.log(idComponent);
 
     return (
         <aside className={`Aside ${className}`}>
             <div className="cnt_components">
                 <div className="cnt_input_title">
-                    <h2 className="title_aside">Components</h2>
+                    <h2 className="title_aside">Componentes</h2>
                     <Input
                         type="text"
-                        placeholder="Search..."
+                        placeholder="Buscar..."
                         onChange={(e) => setSearch(e.target.value)}
                     />
                     <span className="line"></span>

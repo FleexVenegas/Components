@@ -85,43 +85,43 @@ const InputPassword: React.FC<InputProps> = ({
 export default InputPassword;
 
 `;
-export const SCSS = `
+export const CSS = `
 .InputPassword {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
 
-    .title-input {
-        font-size: 0.9rem;
-        margin-left: 10px;
-        color: #000;
-    }
+.title-input {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: #000;
+}
 
-    .container-input {
-        width: 100%;
-        position: relative;
+.container-input {
+    width: 100%;
+    position: relative;
+}
 
-        .cs-input {
-            width: 100%;
-            height: 40px;
-            outline: none;
-            border: none;
-            border-radius: 8px;
-            padding: 0 10px;
-            padding-right: 37px;
-            font-size: 1rem;
-            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        }
+.cs-input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    padding-right: 37px;
+    font-size: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
 
-        .img-password{
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translate(0, -50%);
-            cursor: pointer;
-        }
-    }
+.img-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    cursor: pointer;
 }
 `;
 export const USE = `

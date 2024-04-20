@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
 import CodeTemplate from "../../components/atoms/CodeTemplate/CodeTemplate";
 import Container from "../../components/atoms/Container/Container";
@@ -7,10 +7,12 @@ import "./ButtonView.scss";
 import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
 import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
 import Button from "../../components/atoms/Button/Button";
-import { JavaScript, SCSS, TypeScript, USE } from "./ButtonViewLanguage";
+import { CSS, JavaScript, TypeScript, USE } from "./ButtonViewLanguage";
+import Copy from "../../components/atoms/Copy/Copy";
 
 const ButtonView = () => {
     const [select, setSelect] = useState("JavaScript");
+
 
     return (
         <Container className="ButtonView">
@@ -19,10 +21,30 @@ const ButtonView = () => {
                 <div className="code-left">
                     <ButtonHeader setSelect={setSelect} />
                     <Syntaxis>
-                        {select === "JavaScript" && JavaScript}
-                        {select === "TypeScript" && TypeScript}
-                        {select === "SCSS" && SCSS}
-                        {select === "USE" && USE}
+                        {select === "JavaScript" && (
+                            <>
+                                {JavaScript}
+                                <Copy dataCopy={JavaScript} />
+                            </>
+                        )}
+                        {select === "TypeScript" && (
+                            <>
+                                {TypeScript}
+                                <Copy dataCopy={TypeScript} />
+                            </>
+                        )}
+                        {select === "CSS" && (
+                            <>
+                                {CSS}
+                                <Copy dataCopy={CSS} />
+                            </>
+                        )}
+                        {select === "USE" && (
+                            <>
+                                {USE}
+                                <Copy dataCopy={USE} />
+                            </>
+                        )}
                     </Syntaxis>
                 </div>
                 <div className="code-right">

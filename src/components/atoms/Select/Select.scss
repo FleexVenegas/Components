@@ -9,10 +9,6 @@
         transition: all 0.5s;
         color: #000;
         margin-left: 10px;
-
-        &.move_text {
-            top: -13px;
-        }
     }
 
     .select-select {
@@ -27,7 +23,7 @@
         color: #1a2931;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 
-        option {
+        .select-option {
             font-size: 1rem;
             color: #2d414c;
             border-radius: 15px;

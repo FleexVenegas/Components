@@ -11,7 +11,8 @@ import Title from "../../components/atoms/Title/Title";
 import "./SelectView.scss";
 import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
 import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
-import { Javascript, SCSS, TypeScript, USE } from "./SelectViewLanguage";
+import { JavaScript, CSS, TypeScript, USE } from "./SelectViewLanguage";
+import Copy from "../../components/atoms/Copy/Copy";
 
 const SelectView = () => {
     const [select, setSelect] = useState("JavaScript");
@@ -23,11 +24,31 @@ const SelectView = () => {
                 <div className="code-left">
                     <ButtonHeader setSelect={setSelect} />
                     <Syntaxis>
-                        {select === "JavaScript" && Javascript}
-                        {select === "TypeScript" && TypeScript}
-                        {select === "SCSS" && SCSS}
-                        {select === "USE" && USE}
-                        </Syntaxis>
+                        {select === "JavaScript" && (
+                            <>
+                                {JavaScript}
+                                <Copy dataCopy={JavaScript} />
+                            </>
+                        )}
+                        {select === "TypeScript" && (
+                            <>
+                                {TypeScript}
+                                <Copy dataCopy={TypeScript} />
+                            </>
+                        )}
+                        {select === "CSS" && (
+                            <>
+                                {CSS}
+                                <Copy dataCopy={CSS} />
+                            </>
+                        )}
+                        {select === "USE" && (
+                            <>
+                                {USE}
+                                <Copy dataCopy={USE} />
+                            </>
+                        )}
+                    </Syntaxis>
                 </div>
                 <div className="code-right">
                     <SubtTitle title="Example" />

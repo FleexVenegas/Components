@@ -1,4 +1,4 @@
-export const SCSS = `
+export const CSS = `
 .Button {
     width: 250px;
     height: 40px;
@@ -11,49 +11,49 @@ export const SCSS = `
     position: relative;
     z-index: 1;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
 
-    &:hover::before {
-        width: 100%;
-    }
+.Button:hover::before {
+    width: 100%;
+}
 
-    &.submit {
-        background: #008000;
-        color: #fff;
+.Button.submit {
+    background: #008000;
+    color: #fff;
+}
 
-        &:hover::before {
-            background: #004e00;
-        }
-    }
+.Button.submit:hover::before {
+    background: #004e00;
+}
 
-    &.cancel {
-        background: #ff0000;
-        color: #fff;
+.Button.cancel {
+    background: #ff0000;
+    color: #fff;
+}
 
-        &:hover::before {
-            background: #ac0000;
-        }
-    }
+.Button.cancel:hover::before {
+    background: #ac0000;
+}
 
-    &.question {
-        background: #ffa500;
-        color: #fff;
+.Button.question {
+    background: #ffa500;
+    color: #fff;
+}
 
-        &:hover::before {
-            background: #c27e00;
-        }
-    }
+.Button.question:hover::before {
+    background: #c27e00;
+}
 
-    &::before {
-        transition: all 0.5s;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        border-radius: 8px;
-        z-index: -1;
-    }
+.Button::before {
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 8px;
+    z-index: -1;
 }
 `;
 
