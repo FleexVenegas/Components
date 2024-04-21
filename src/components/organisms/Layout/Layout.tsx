@@ -13,9 +13,9 @@ const Layout: React.FC<ChildrenProps> = ({ children, className = "" }) => {
     return (
         <div className={`Layout ${className}`}>
             <Header className="Header_" />
-            {/* <Aside className="Aside_" />
+            <Aside className="Aside_" />
             <main className="View_">{children}</main>
-            <Footer className="Footer_" /> */}
+            <Footer className="Footer_" />
         </div>
     );
 };

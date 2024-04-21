@@ -7,6 +7,7 @@ import ButtonView from "./page/ButtonView/ButtonView";
 import SelectView from "./page/SelectView/SelectView";
 import InputPasswordView from "./page/InputPasswordView/InputPasswordView";
 import DocumentUploaderView from "./page/DocumentUploaderView/DocumentUploaderView";
+import ImageUploaderView from "./page/ImageUploaderView/ImageUploaderView";
 
 function App() {
     return (
@@ -38,6 +39,10 @@ function App() {
                         <Route
                             path="/component/upload-document"
                             element={<DocumentUploaderView />}
+                        />
+                        <Route
+                            path="/component/upload-image"
+                            element={<ImageUploaderView />}
                         />
                     </Routes>
                 </Layout>

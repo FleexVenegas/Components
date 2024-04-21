@@ -1,9 +1,11 @@
 .selected-image-container{
     position: relative;
+    width: 150px;
+    height: 150px;
 
     .cnt-img{
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
 
         .selected-image{
@@ -33,15 +35,18 @@
 
 .cnt_file-chosse{
     position: relative;
+    width: 150px;
+        height: 150px;
     
     .file-input_img{
         display: none;
     }
 
     .div_showImage{
-        width: 150px;
-        height: 150px;
-        background-image: url(../../../assets/image/userBack.png);
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        background-image: url(./uploaderIcon/user.svg);
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 50%;
@@ -52,13 +57,18 @@
         width: 30px;
         height: 30px;
         position: absolute;
-        top: 0;
+        top: 5px;
         right: 10px;
         border-radius: 50%;
-        background-color: rgb(23, 101, 218);
+        background-color: #fff;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+
+        &:hover{
+            background: rgba(32, 142, 232, 0.5);
+        }
     }
 }
