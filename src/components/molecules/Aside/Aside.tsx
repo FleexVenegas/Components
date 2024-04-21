@@ -52,6 +52,16 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             text: "Upload image",
             url: "/component/upload-image",
         },
+        {
+            id: 8,
+            text: "Check Box",
+            url: "/component/check-box",
+        },
+        {
+            id: 8,
+            text: "Toggle Token",
+            url: "/component/toggle-token",
+        },
     ]);
 
     useEffect(() => {

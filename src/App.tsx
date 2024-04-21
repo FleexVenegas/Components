@@ -8,6 +8,8 @@ import SelectView from "./page/SelectView/SelectView";
 import InputPasswordView from "./page/InputPasswordView/InputPasswordView";
 import DocumentUploaderView from "./page/DocumentUploaderView/DocumentUploaderView";
 import ImageUploaderView from "./page/ImageUploaderView/ImageUploaderView";
+import CheckBoxView from "./page/CheckBoxView/CheckBoxView";
+import ToggleTokensView from "./page/ToggleTokensView/ToggleTokensView";
 
 function App() {
     return (
@@ -43,6 +45,14 @@ function App() {
                         <Route
                             path="/component/upload-image"
                             element={<ImageUploaderView />}
+                        />
+                        <Route
+                            path="/component/check-box"
+                            element={<CheckBoxView />}
+                        />
+                        <Route
+                            path="/component/toggle-token"
+                            element={<ToggleTokensView />}
                         />
                     </Routes>
                 </Layout>
