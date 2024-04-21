@@ -62,6 +62,11 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             text: "Toggle Token",
             url: "/component/toggle-token",
         },
+        {
+            id: 9,
+            text: "Accordion",
+            url: "/component/accordion",
+        },
     ]);
 
     useEffect(() => {

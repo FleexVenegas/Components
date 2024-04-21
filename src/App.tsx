@@ -10,6 +10,7 @@ import DocumentUploaderView from "./page/DocumentUploaderView/DocumentUploaderVi
 import ImageUploaderView from "./page/ImageUploaderView/ImageUploaderView";
 import CheckBoxView from "./page/CheckBoxView/CheckBoxView";
 import ToggleTokensView from "./page/ToggleTokensView/ToggleTokensView";
+import AccordionView from "./page/AccordionView/AccordionView";
 
 function App() {
     return (
@@ -53,6 +54,10 @@ function App() {
                         <Route
                             path="/component/toggle-token"
                             element={<ToggleTokensView />}
+                        />
+                        <Route
+                            path="/component/accordion"
+                            element={<AccordionView />}
                         />
                     </Routes>
                 </Layout>

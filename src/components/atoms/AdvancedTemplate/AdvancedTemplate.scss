@@ -1,0 +1,32 @@
+.AdvancedTemplate {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .example {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 30px 0;
+
+        @media (max-width: 768px) {
+            padding: 15px 0;
+        }
+    }
+
+    .code {
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 30px 0;
+        position: relative;
+
+        @media (max-width: 768px) {
+            padding: 15px 0;
+        }
+    }
+}

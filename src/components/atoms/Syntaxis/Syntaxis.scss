@@ -1,10 +1,9 @@
 .Syntaxis {
+    position: relative;
     .syn-pre {
         color: black;
         background: white;
         border-radius: 20px;
-        // background: rgb(245, 242, 240);
-        // text-shadow: white 0px 1px;
         font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
         font-size: 1em;
         text-align: left;
@@ -36,3 +35,4 @@
 
     }
 }
+
