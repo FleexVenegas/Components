@@ -7,17 +7,25 @@
     padding: 50px 0;
     background: var(--c950);
     transition: all 0.5s;
+
+    @media (max-width: 768px) {
+        padding-top: 20px ;
+    }
     
     
     .cnt_inside{
         width: 75vw;
         min-height: 80vh;
         background: rgb(245, 242, 240);
-        // background-color: white;
         border-radius: 10px;
         padding: 20px;
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
         transition: all 0.5s;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 15px;
+        }
     }
 }

@@ -5,7 +5,13 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
     .code-left {
         grid-area: 1 / 1 / 2 / 2;
         position: relative;
@@ -17,5 +23,6 @@
         flex-direction: column;
         gap: 20px;
         padding: 0 20px;
+        align-items: center;
     }
 }

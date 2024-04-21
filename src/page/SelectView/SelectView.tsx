@@ -52,7 +52,7 @@ const SelectView = () => {
                 </div>
                 <div className="code-right">
                     <SubtTitle title="Ejemplo" />
-                    <div className="cnt_example">
+                    <div className="cnt_example" style={{ width: "100%" }}>
                         <Select text="Select" />
                     </div>
                 </div>

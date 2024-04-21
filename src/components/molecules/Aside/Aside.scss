@@ -5,6 +5,30 @@
     padding: 30px 20px;
     border-right: 0.5px solid rgba(255, 255, 255, 0.7);
 
+
+    @media (max-width: 768px) {
+        width: 70%;
+        position: absolute;
+        top: 81px;
+        left: -80%;
+        z-index: 5;
+        transition: all 0.5s;
+
+
+        &.move-aside{
+            left: 0;
+        }
+    }
+
+    .btn-close{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: transparent;
+        border: none;
+    }
+
+
     .cnt_components {
         width: 100%;
         display: flex;

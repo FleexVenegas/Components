@@ -2,6 +2,13 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 10px;
+    }
 
     .btn_code {
         width: 100px;
@@ -16,6 +23,10 @@
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
         color: var(--black);
         transition: all 0.5s;
+
+        @media (max-width: 768px) {
+            width: 110px;
+        }
         
 
         &.active-button{

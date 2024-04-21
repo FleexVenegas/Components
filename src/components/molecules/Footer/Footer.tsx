@@ -1,15 +1,23 @@
-import React from 'react'
+import React from "react";
 
 //Interfaces
-import { ClassProps } from '../../../interfaces/ClassProps.interfaces'
+import { ClassProps } from "../../../interfaces/ClassProps.interfaces";
 
 //Styles
-import "./Footer.scss"
+import "./Footer.scss";
 
-const Footer: React.FC<ClassProps> = ({className}) => {
-  return (
-    <footer className={`Footer ${className}`}>Footer</footer>
-  )
-}
+//Components
+import Description from "../../atoms/Description/Description";
 
-export default Footer
+const Footer: React.FC<ClassProps> = ({ className }) => {
+    const getCurrentYear = () => {
+        return new Date().getFullYear();
+    };
+    return (
+        <footer className={`Footer ${className}`}>
+            <Description className="p-footer">&copy; {getCurrentYear()} DV Components</Description>
+        </footer>
+    );
+};
+
+export default Footer;

@@ -6,6 +6,10 @@
     .title-title{
         font-size: 2rem;
         color: var(--blue);
+
+        @media (max-width: 768px) {
+            font-size: 1.3rem;
+        }
     }
 
     .parr-title{

@@ -78,6 +78,10 @@ body {
     font-family: "Metropolis", sans-serif;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 li {
     list-style-type: none;
 }

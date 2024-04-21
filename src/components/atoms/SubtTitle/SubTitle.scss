@@ -2,10 +2,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
     
     .title-title{
         font-size: 1.5rem;
         color: var(--blue);
+
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
+        }
     }
 
     .parr-title{
