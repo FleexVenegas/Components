@@ -17,7 +17,7 @@ const ToggleTokens = ({ isChecked, setIsChecked, id, text = "Example" }) => {
             />
             <label
                 htmlFor={id ? id : "toggle-check"}
-                className={'toggle-label ' + (isChecked ? 'checked-label' : '')}
+                className={'toggle-label $(isChecked ? 'checked-label' : '')}
             >
                 {text}
             </label>
@@ -26,7 +26,7 @@ const ToggleTokens = ({ isChecked, setIsChecked, id, text = "Example" }) => {
 };
 
 export default ToggleTokens;
-`
+`;
 export const TypeScript = `
 import { Dispatch, SetStateAction } from "react";
 
@@ -58,7 +58,7 @@ const ToggleTokens = ({
             />
             <label
                 htmlFor={id ? id : "toggle-check"}
-                className={'toggle-label ' + (isChecked ? 'checked-label' : '')}
+                className={'toggle-label $(isChecked ? 'checked-label' : '')}
             >
                 {text}
             </label>
@@ -67,7 +67,7 @@ const ToggleTokens = ({
 };
 
 export default ToggleTokens;
-`
+`;
 export const CSS = `
 .Container-toggleTokens{
     width: 170px;
@@ -102,7 +102,7 @@ export const CSS = `
 .checked-label{
     color: #fff;
 }
-`
+`;
 export const USE = `
 const [isCheckedOne, setIsCheckedOne] = useState(false);
 const [isCheckedTwo, setIsCheckedTwo] = useState(true);
@@ -126,4 +126,4 @@ const [isCheckedThree, setIsCheckedThree] = useState(false);
     id="option3"
     text="Option 3"
 />
-`
+`;

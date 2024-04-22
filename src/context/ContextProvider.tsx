@@ -13,6 +13,8 @@ interface AppContextProps {
     setOpenAside: Dispatch<SetStateAction<boolean>>;
     windowWidth: boolean;
     setWindowWidth: Dispatch<SetStateAction<boolean>>;
+    showModal: boolean;
+    setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -21,8 +23,21 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({
     children,
 }) => {
     const [openAside, setOpenAside] = useState(false);
-
+    const [showModal, setShowModal] = useState<boolean>(true);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const stateModal = localStorage.getItem("viewModal");
+        if (stateModal === "true") {
+            setShowModal(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (!showModal) {
+            localStorage.setItem("viewModal", "true");
+        }
+    }, [showModal]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -43,6 +58,8 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({
                 setOpenAside,
                 windowWidth,
                 setWindowWidth,
+                showModal,
+                setShowModal,
             }}
         >
             {children}
