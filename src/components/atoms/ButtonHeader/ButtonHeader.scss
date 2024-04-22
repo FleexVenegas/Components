@@ -7,6 +7,18 @@
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         gap: 20px;
+        padding: 10px 0;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 1px;
+            background: var(--c950);
+        }
     }
 
     .cnt-btns {
@@ -69,7 +81,7 @@
 
     .container-info {
         position: absolute;
-        top: 35px;
+        top: 40px;
         right: 0;
         z-index: 1;
         width: 600px;

@@ -5,12 +5,14 @@ import "./ButtonHeader.scss";
 
 //Assets
 import Example from "../../../assets/images/ejemplo_code.png";
+import Example1 from "../../../assets/images/ejemplo1.png";
+
+//Context
 import { useStateContext } from "../../../context/ContextProvider";
 
 interface ButtonHeaderProps {
     setSelect: Dispatch<SetStateAction<string>>;
 }
-
 const ButtonHeader = ({ setSelect }: ButtonHeaderProps) => {
     const [selectButton, setSelectButton] = useState(1);
 
@@ -57,13 +59,11 @@ const ButtonHeader = ({ setSelect }: ButtonHeaderProps) => {
                     <p className="p-info">
                         En algunos ejemplos, encontrarás fragmentos de código
                         como este:
-                        <span className="spna-code">
-                            <code className="code-info">
-                                <span className="span-info">
-                                    {`className={'toggle-label $(isChecked ? "checked-label" : '')'}`}
-                                </span>
-                            </code>
-                        </span>
+                    </p>
+                    <div className="cnt_img">
+                        <img src={Example1} alt="" className="img-example" />
+                    </div>
+                    <p className="p-info">
                         En donde se cambió las comillas invertidas del inicio
                         por comillas simples y las llaves por paréntesis, esto
                         ocurre porque no se puede formatear correctamente el
