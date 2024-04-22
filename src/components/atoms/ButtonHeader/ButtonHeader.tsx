@@ -77,7 +77,9 @@ const ButtonHeader = ({ setSelect }: ButtonHeaderProps) => {
                         llaves.
                         <span>Por ejemplo: </span>
                     </p>
-                    <img src={Example} alt="" className="img-example" />
+                    <div className="cnt_img">
+                        <img src={Example} alt="" className="img-example" />
+                    </div>
                 </div>
             )}
         </div>
