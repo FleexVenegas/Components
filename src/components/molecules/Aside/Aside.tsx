@@ -80,7 +80,7 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
         setIdComponent(null);
         const handleSearch = () => {
             const foundComponent = optionComponents.find(
-                (comp) => comp.text.toLowerCase() === search.toLowerCase()
+                (comp) => comp.text.toLowerCase().includes(search.toLowerCase())
             );
             if (foundComponent) {
                 const idElement = foundComponent.id;
