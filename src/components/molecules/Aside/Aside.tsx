@@ -58,12 +58,12 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             url: "/component/check-box",
         },
         {
-            id: 8,
+            id: 9,
             text: "Toggle Token",
             url: "/component/toggle-token",
         },
         {
-            id: 9,
+            id: 10,
             text: "Accordion",
             url: "/component/accordion",
         },
@@ -80,7 +80,7 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
         setIdComponent(null);
         const handleSearch = () => {
             const foundComponent = optionComponents.find(
-                (comp) => comp.text.toLowerCase() === search.toLowerCase()
+                (comp) => comp.text.toLowerCase().includes(search.toLowerCase())
             );
             if (foundComponent) {
                 const idElement = foundComponent.id;
