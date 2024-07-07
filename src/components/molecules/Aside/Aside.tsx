@@ -17,61 +17,17 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
     const { openAside, setOpenAside, windowWidth } = useStateContext();
 
     const [optionComponents, setOptionComponents] = useState([
-        {
-            id: 1,
-            text: "Input",
-            url: "/component/input",
-        },
-        {
-            id: 2,
-            text: "Text Area",
-            url: "/component/text-area",
-        },
-        {
-            id: 3,
-            text: "Button",
-            url: "/component/button",
-        },
-        {
-            id: 4,
-            text: "Select",
-            url: "/component/select",
-        },
-        {
-            id: 5,
-            text: "Input Password",
-            url: "/component/input-password",
-        },
-        {
-            id: 6,
-            text: "Upload Document",
-            url: "/component/upload-document",
-        },
-        {
-            id: 7,
-            text: "Upload image",
-            url: "/component/upload-image",
-        },
-        {
-            id: 8,
-            text: "Check Box",
-            url: "/component/check-box",
-        },
-        {
-            id: 9,
-            text: "Toggle Token",
-            url: "/component/toggle-token",
-        },
-        {
-            id: 10,
-            text: "Accordion",
-            url: "/component/accordion",
-        },
-        {
-            id: 11,
-            text: "Table",
-            url: "/component/table",
-        },
+        { id: 1, text: "Input", url: "/component/input" },
+        { id: 2, text: "Text Area", url: "/component/text-area" },
+        { id: 3, text: "Button", url: "/component/button" },
+        { id: 4, text: "Select", url: "/component/select" },
+        { id: 5, text: "Input Password", url: "/component/input-password" },
+        { id: 6, text: "Upload Document", url: "/component/upload-document" },
+        { id: 7, text: "Upload image", url: "/component/upload-image" },
+        { id: 8, text: "Check Box", url: "/component/check-box" },
+        { id: 9, text: "Toggle Token", url: "/component/toggle-token" },
+        { id: 10, text: "Accordion", url: "/component/accordion" },
+        { id: 11, text: "Table", url: "/component/table" },
     ]);
 
     useEffect(() => {
@@ -142,23 +98,32 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
                     />
                     <span className="line"></span>
                 </div>
-                <ul className="cnt_ul">
-                    {optionComponents.map((_, idx) => (
-                        <li
-                            key={idx}
-                            className={`a-li ${
-                                location.pathname === _.url ? "active" : ""
-                            } ${idComponent === _.id ? "found" : ""}`}
-                            onClick={() =>
-                                windowWidth ? setOpenAside(false) : null
-                            }
-                        >
-                            <NavLink className={"text_compon"} to={_.url}>
-                                {_.text}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
+                <div className="inside-compon">
+                    <div className="block-compon">
+                        <ul className="cnt_ul">
+                            {optionComponents.map((_, idx) => (
+                                <li
+                                    key={idx}
+                                    className={`a-li ${
+                                        location.pathname === _.url
+                                            ? "active"
+                                            : ""
+                                    } ${idComponent === _.id ? "found" : ""}`}
+                                    onClick={() =>
+                                        windowWidth ? setOpenAside(false) : null
+                                    }
+                                >
+                                    <NavLink
+                                        className={"text_compon"}
+                                        to={_.url}
+                                    >
+                                        {_.text}
+                                    </NavLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </aside>
     );
