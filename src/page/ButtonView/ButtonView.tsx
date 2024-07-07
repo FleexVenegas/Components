@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
 import CodeTemplate from "../../components/atoms/CodeTemplate/CodeTemplate";
 import Container from "../../components/atoms/Container/Container";
@@ -12,6 +12,17 @@ import Copy from "../../components/atoms/Copy/Copy";
 
 const ButtonView = () => {
     const [select, setSelect] = useState("JavaScript");
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
 
 
     return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //Styles
 import "./CheckBoxView.scss";
@@ -19,6 +19,17 @@ const CheckBoxView = () => {
 
     const [isCheckedOne, setIsCheckedOne] = useState(false);
     const [isCheckedTwo, setIsCheckedTwo] = useState(true);
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
 
     return (
         <Container className="CheckBoxView">

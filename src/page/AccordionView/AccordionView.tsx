@@ -9,7 +9,7 @@ import Accordion from "../../components/organisms/Accordion/Accordion";
 import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
 import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
 import Syntaxis from "../../components/atoms/Syntaxis/Syntaxis";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CSS, JavaScript, TypeScript, USE } from "./AccordionLanguage";
 import Copy from "../../components/atoms/Copy/Copy";
 
@@ -35,6 +35,17 @@ const AccordionView = () => {
     ];
 
     const [select, setSelect] = useState("JavaScript");
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
 
     return (
         <Container className="AccordionView">

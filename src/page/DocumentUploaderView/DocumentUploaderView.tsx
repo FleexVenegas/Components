@@ -1,5 +1,5 @@
 //Components
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../../components/atoms/Container/Container";
 import Title from "../../components/atoms/Title/Title";
 import DocumentUploader from "../../components/organisms/DocumentUploader/DocumentUploader";
@@ -16,6 +16,17 @@ import Copy from "../../components/atoms/Copy/Copy";
 const DocumentUploaderView = () => {
     const [file, setFile] = useState<File | undefined>();
     const [select, setSelect] = useState("JavaScript");
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
 
     return (
         <Container className={`DocumentUploaderView ${file?.name ? "" : ""}`}>

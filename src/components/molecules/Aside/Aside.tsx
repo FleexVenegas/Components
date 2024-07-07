@@ -10,7 +10,7 @@ import Input from "../../atoms/Input/Input";
 import { useStateContext } from "../../../context/ContextProvider";
 
 const Aside: React.FC<ClassProps> = ({ className = "" }) => {
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState<string | null>(null);
     const [idComponent, setIdComponent] = useState<number | null>(null);
     const location = useLocation();
 
@@ -67,6 +67,11 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
             text: "Accordion",
             url: "/component/accordion",
         },
+        {
+            id: 11,
+            text: "Table",
+            url: "/component/table",
+        },
     ]);
 
     useEffect(() => {
@@ -79,15 +84,17 @@ const Aside: React.FC<ClassProps> = ({ className = "" }) => {
     useEffect(() => {
         setIdComponent(null);
         const handleSearch = () => {
-            const foundComponent = optionComponents.find(
-                (comp) => comp.text.toLowerCase().includes(search.toLowerCase())
-            );
-            if (foundComponent) {
-                const idElement = foundComponent.id;
-                setIdComponent(idElement);
-                setTimeout(() => {
-                    setIdComponent(null);
-                }, 7000);
+            if (search) {
+                const foundComponent = optionComponents.find((comp) =>
+                    comp.text.toLowerCase().includes(search.toLowerCase())
+                );
+                if (foundComponent) {
+                    const idElement = foundComponent.id;
+                    setIdComponent(idElement);
+                    setTimeout(() => {
+                        setIdComponent(null);
+                    }, 7000);
+                }
             }
         };
 

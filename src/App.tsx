@@ -11,6 +11,7 @@ import ImageUploaderView from "./page/ImageUploaderView/ImageUploaderView";
 import CheckBoxView from "./page/CheckBoxView/CheckBoxView";
 import ToggleTokensView from "./page/ToggleTokensView/ToggleTokensView";
 import AccordionView from "./page/AccordionView/AccordionView";
+import TableView from "./page/TableView/TableView";
 
 function App() {
     return (
@@ -58,6 +59,10 @@ function App() {
                         <Route
                             path="/component/accordion"
                             element={<AccordionView />}
+                        />
+                        <Route
+                            path="/component/table"
+                            element={<TableView />}
                         />
                     </Routes>
                 </Layout>

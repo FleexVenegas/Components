@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 //Styles
 import "./ViewMain.scss";
 
@@ -8,6 +9,18 @@ import SubtTitle from "../../components/atoms/SubtTitle/SubtTitle";
 import Title from "../../components/atoms/Title/Title";
 
 const ViewMain = () => {
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
+
     return (
         <Container className="ViewMain">
             <Title title="Bienvenido a DV Components" />

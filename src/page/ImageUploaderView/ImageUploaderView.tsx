@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../../components/atoms/Container/Container";
 import Title from "../../components/atoms/Title/Title";
 import ImageUploader from "../../components/organisms/ImageUploader/ImageUploader";
@@ -13,6 +13,18 @@ import { CSS, JavaScript, TypeScript, USE } from "./ImageUploaderLanguaje";
 const ImageUploaderView = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [select, setSelect] = useState("JavaScript");
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
+
     return (
         <Container className={`ImageUploaderView ${selectedImage ? "" : ""}`}>
             <Title title="Image Uploader" />

@@ -1,0 +1,194 @@
+.Cnt_table {
+    width: 100%;
+    position: relative;
+
+    @media (max-width: 768px) {
+        overflow: auto;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background: transparent;
+
+        @media (max-width: 768px) {
+            width: 1500px;
+        }
+
+        .thead {
+            text-align: left;
+            height: 35px;
+            width: 100%;
+            background: #fff;
+
+            .tr {
+                width: 100%;
+                text-align: center;
+                border-radius: 10px 0;
+
+
+                .th {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    padding: 0 8px;
+                    color: #000;
+
+                    &:nth-child(1) {
+                        border-top-left-radius: 10px;
+                    }
+                }
+
+                .actionts_ {
+                    border-top-right-radius: 10px;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    padding: 0 8px;
+                    user-select: none;
+
+                }
+            }
+
+        }
+
+        .tbody {
+            .tr {
+                height: 40px;
+                transition: all 0.3s;
+                text-align: center;
+                border-bottom: 1px solid #ced8e9;
+
+                &:hover {
+                    font-weight: 400;
+                    // cursor: pointer;
+                    color: #f4f6fb;
+                    background: #a2b7d7;
+
+                }
+
+                .td {
+                    padding: 0 8px;
+                    font-size: 1rem;
+                    text-align: center;
+
+                    span {
+                        text-align: center;
+                        color: #131926;
+                    }
+
+                    .status-bg {
+                        padding: 3px 7px;
+                        border-radius: 5px;
+                        font-size: 0.8rem;
+
+                        &.greenStatus {
+                            background: #008000;
+                            color: #fff;
+                        }
+
+                        &.orangeStatus {
+                            background: #ff0000;
+                            color: #fff;
+
+                        }
+                    }
+
+                }
+
+                .action_body {
+                    width: 10%;
+                    padding: 0 8px;
+                    font-size: 1rem;
+                    text-align: center;
+                    user-select: none;
+
+                    .cnt_images {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        gap: 15px;
+
+                        img {
+                            cursor: pointer;
+                            width: 20px;
+                            height: 20px;
+                            -webkit-filter: invert(12%) sepia(10%) saturate(2097%) hue-rotate(159deg) brightness(95%) contrast(90%);
+                            filter: invert(12%) sepia(10%) saturate(2097%) hue-rotate(159deg) brightness(95%) contrast(90%);
+                            transition: all 0.5s;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cnt_controlls {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        user-select: none;
+
+        @media (max-width: 768px) {
+            width: 1500px;
+        }
+
+        .cnt_spans {
+            display: flex;
+            gap: 40px;
+
+            span {
+                font-size: 1.1rem;
+                color: #293751;
+                font-weight: 400;
+            }
+        }
+
+        .cnt_btns {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+
+            .bnt_controls {
+                width: 180px;
+                height: 40px;
+                border-radius: 7px;
+                color: #293751;
+                font-weight: bold;
+                background: #ced8e9;
+                transition: all 0.5s;
+                opacity: 1;
+                user-select: none;
+                cursor: pointer;
+
+                &.btn_prev_hidden {
+                    pointer-events: none;
+                    opacity: 0.2;
+                }
+
+                &.btn_next_hidden {
+                    pointer-events: none;
+                    opacity: 0.2;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

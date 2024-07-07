@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //Components
 import ButtonHeader from "../../components/atoms/ButtonHeader/ButtonHeader";
@@ -16,6 +16,17 @@ import Copy from "../../components/atoms/Copy/Copy";
 
 const SelectView = () => {
     const [select, setSelect] = useState("JavaScript");
+
+    useEffect(() => {
+        const scrollToMyRef = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        scrollToMyRef();
+    }, []);
 
     return (
         <Container className="SelectView">

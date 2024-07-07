@@ -1,0 +1,116 @@
+export const columns = [
+    {
+        header: 'ID',
+        accessor: '_id',
+        width: '8%',
+    },
+    {
+        header: 'Name',
+        accessor: 'name',
+        width: '15%',
+    },
+    {
+        header: 'Lastname',
+        accessor: 'lastname',
+        width: '15%',
+    },
+    {
+        header: 'Email',
+        accessor: 'email',
+        width: '17%',
+    },
+
+    {
+        header: 'Created',
+        accessor: 'createdAt',
+        width: '10%',
+    },
+    {
+        header: 'Status',
+        accessor: 'status',
+        width: '10%',
+    },
+];
+
+export const data = [
+    {
+        _id: '1',
+        name: 'John',
+        lastname: 'Doe',
+        email: 'john.doe@example.com',
+        status: 'active',
+        createdAt: '2024-01-01',
+    },
+    {
+        _id: '2',
+        name: 'Jane',
+        lastname: 'Smith',
+        email: 'jane.smith@example.com',
+        status: 'inactive',
+        createdAt: '2024-02-15',
+    },
+    {
+        _id: '3',
+        name: 'Alice',
+        lastname: 'Johnson',
+        email: 'alice.johnson@example.com',
+        status: 'active',
+        createdAt: '2024-03-30',
+    },
+    {
+        _id: '4',
+        name: 'Bob',
+        lastname: 'Brown',
+        email: 'bob.brown@example.com',
+        status: 'active',
+        createdAt: '2024-04-10',
+    },
+    {
+        _id: '5',
+        name: 'Charlie',
+        lastname: 'Davis',
+        email: 'charlie.davis@example.com',
+        status: 'active',
+        createdAt: '2024-05-20',
+    },
+    {
+        _id: '6',
+        name: 'Eva',
+        lastname: 'Martinez',
+        email: 'eva.martinez@example.com',
+        status: 'inactive',
+        createdAt: '2024-06-01',
+    },
+    {
+        _id: '7',
+        name: 'Frank',
+        lastname: 'Wilson',
+        email: 'frank.wilson@example.com',
+        status: 'inactive',
+        createdAt: '2024-07-04',
+    },
+    {
+        _id: '8',
+        name: 'Grace',
+        lastname: 'Taylor',
+        email: 'grace.taylor@example.com',
+        status: 'active',
+        createdAt: '2024-08-11',
+    },
+    {
+        _id: '9',
+        name: 'Hannah',
+        lastname: 'Moore',
+        email: 'hannah.moore@example.com',
+        status: 'inactive',
+        createdAt: '2024-09-22',
+    },
+    {
+        _id: '10',
+        name: 'Ian',
+        lastname: 'Anderson',
+        email: 'ian.anderson@example.com',
+        status: 'inactive',
+        createdAt: '2024-10-05',
+    },
+];
